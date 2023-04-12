@@ -35,7 +35,8 @@ class ClienteAdmin(admin.ModelAdmin):
         'validade_passaporte',
         'cr',
         'validade_cr',
-        'observacoes'
+        'observacoes',
+        'email'
         )
 
 admin.site.register(Cliente,ClienteAdmin)

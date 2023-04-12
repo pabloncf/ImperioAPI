@@ -36,5 +36,6 @@ class ClienteSerializer(serializers.ModelSerializer):
             'validade_passaporte',
             'cr',
             'validade_cr',
-            'observacoes'
+            'observacoes',
+            'email'
         ]

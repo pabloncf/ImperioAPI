@@ -58,6 +58,7 @@ class Cliente(models.Model):
     cr = models.CharField(max_length=100)
     validade_cr = models.CharField(max_length=100)
     observacoes = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nome
