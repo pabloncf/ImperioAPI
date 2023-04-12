@@ -17,11 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
-from formUser.views import ClienteViewSet,DadosPessoaisViewSet
+from formUser.views import ClienteViewSet
 
 router = routers.DefaultRouter()
 router.register('cadastro',ClienteViewSet,basename='Clientes')
-router.register('cadastro_second',DadosPessoaisViewSet,basename='Cadastro_Second')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

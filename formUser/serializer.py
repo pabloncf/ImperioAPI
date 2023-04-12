@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Cliente, DadosPessoais
+from .models import Cliente
 
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,12 +27,7 @@ class ClienteSerializer(serializers.ModelSerializer):
             'dependente_01',
             'dependente_02',
             'dependente_03',
-            'dependente_04'
-        ]
-class DadosPessoaisSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = DadosPessoais
-        fields = [
+            'dependente_04',
             'cpf',
             'rg',
             'orgao_emissor',

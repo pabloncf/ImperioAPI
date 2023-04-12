@@ -49,10 +49,6 @@ class Cliente(models.Model):
     dependente_03 = models.CharField(max_length=100)
     dependente_04 = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.nome
-
-class DadosPessoais(models.Model):
     cpf = models.CharField(max_length=100)
     rg = models.CharField(max_length=100)
     orgao_emissor = models.CharField(max_length=100)
@@ -64,4 +60,5 @@ class DadosPessoais(models.Model):
     observacoes = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.cpf
+        return self.nome
+

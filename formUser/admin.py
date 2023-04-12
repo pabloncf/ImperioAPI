@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cliente,DadosPessoais
+from .models import Cliente
 # Register your models here.
 
 class ClienteAdmin(admin.ModelAdmin):
@@ -26,13 +26,7 @@ class ClienteAdmin(admin.ModelAdmin):
         'dependente_01',
         'dependente_02',
         'dependente_03',
-        'dependente_04'
-        )
-
-admin.site.register(Cliente,ClienteAdmin)
-
-class DadosPessoaisAdmin(admin.ModelAdmin):
-    list_display = (
+        'dependente_04',
         'cpf',
         'rg',
         'orgao_emissor',
@@ -42,6 +36,6 @@ class DadosPessoaisAdmin(admin.ModelAdmin):
         'cr',
         'validade_cr',
         'observacoes'
-    )
+        )
 
-admin.site.register(DadosPessoais,DadosPessoaisAdmin)
+admin.site.register(Cliente,ClienteAdmin)
