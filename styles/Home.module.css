@@ -1,0 +1,96 @@
+.container h1 {
+
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: white;
+
+  font-size: 50px;
+
+  border-radius: 20px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--primary50);
+  transition: 0.3s;
+}
+
+.container a:hover {
+  text-decoration: underline;
+  opacity: 75%;
+}
+
+.about p {
+  color: rgba(148, 10, 10, 1);
+  width: 60%;
+}
+
+.about {
+  padding: 5rem;
+  width: 91.5%;
+  margin-right: auto;
+
+  background-color: white;
+
+  color:  rgba(148, 10, 10, 1);
+
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+}
+
+.invite {
+  padding: 5rem;
+  width: 60%;
+  margin-left: auto;
+
+  color: white;
+
+  clip-path: polygon(0 3vw, 100% calc(3vw + 3%), 100% 100%, 0 calc(100% - 3vw));
+}
+
+.invite a {
+  margin-left: 5px;
+  color: blue;
+}
+
+.location {
+  padding: 5rem;
+  width: 91.5%;
+  margin-right: auto;
+
+  background-color: white;
+  color: rgba(148, 10, 10, 1);
+}
+
+
+
+.images {
+  width: 50%;
+  height: 100%;
+
+  border-radius: 900px;
+}
+
+#wave {
+  position: relative;
+  height: 150px;
+  margin-top: -150px;
+  background: #fff;
+}
+
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 300%;
+  height: 300%;
+  top: -200%;
+  left: -100%;
+  background-color: white;
+  transform-origin: center;
+}

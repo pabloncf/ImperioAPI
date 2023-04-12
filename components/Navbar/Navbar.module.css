@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: linear-gradient(90deg, rgba(69, 5, 5, 1) 0%, rgba(148, 10, 10, 1) 35%, rgba(196, 14, 14, 1) 100%);
+  padding: 0.5rem;
+
+}
+
+.container h1 {
+  display: none;
+}
+
+.logo {
+  width: 4rem;
+  height: 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    align-items: center;
+  }
+
+  .logo {
+    width: 9rem;
+    height: 4rem;
+    margin-inline: 1rem;
+  }
+
+  .container h1 {
+    color: var(--fundo);
+    display: flex;
+    text-align: center;
+    margin-inline: 1rem;
+  }
+
+}
