@@ -1,50 +1,52 @@
-
-
-.container{
-  background-image: '/images/scope.jpg';
+.container {
+  background-image: "/images/scope.jpg";
   display: flex;
   padding-inline: 20rem;
   margin-top: 3rem;
   justify-content: space-evenly;
-  
 }
 
-
-.hidden{
+.hidden {
+  /*esconder um h1 feito pra alinhar*/
   visibility: hidden;
 }
 
 .form h1 {
   margin: 0;
+  color: whitesmoke;
 }
 .form label {
   display: flex;
+  color: whitesmoke;
 }
 
 .form input {
+  border-radius: 10px;
   border: 2px solid var(--primary50);
   background-color: whitesmoke;
   width: 16rem;
   height: 1rem;
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
 }
 
 .form select {
+  border-radius: 10px;
   border: 2px solid var(--primary50);
   background-color: whitesmoke;
   width: 16rem;
   height: 2rem;
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
 }
 
 .form button {
   width: 16rem;
   height: 2rem;
+  margin: auto;
   margin-top: 1rem;
   display: block;
   background-color: green;
   color: whitesmoke;
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
@@ -56,45 +58,47 @@
 }
 
 .form textarea {
+  border-radius: 10px;
   border: 2px solid var(--primary50);
   width: 16rem;
   height: 2rem;
+  font-family: "Mukta", sans-serif;
 }
 
 @media (max-width: 768px) {
+  /*para dispositivos moveis*/
+  .container {
+    display: block;
+    padding-inline: 0;
+    margin-top: 3rem;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.container{
-  display: block;
-  padding-inline: 0;
-  margin-top: 3rem;
-  align-items: center;
-  flex-direction: column;
-}
+  .form h1 {
+    text-align: center;
+  }
 
-.form h1 {
-  text-align: center;
-}
+  .form label {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
 
-.form label {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-}
+  .form input {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
 
-.form input {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-}
-
-.form select {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-}
-.form textarea {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-}
+  .form select {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  .form textarea {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
 }

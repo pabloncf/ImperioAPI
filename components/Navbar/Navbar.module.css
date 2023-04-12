@@ -1,36 +1,36 @@
 .container {
+  align-items: center;
+  width: 100%;
   display: flex;
   justify-content: center;
-  background-color: linear-gradient(90deg, rgba(69, 5, 5, 1) 0%, rgba(148, 10, 10, 1) 35%, rgba(196, 14, 14, 1) 100%);
-  padding: 0.5rem;
-
+  background-color: linear-gradient(
+    90deg,
+    rgba(69, 5, 5, 1) 0%,
+    rgba(148, 10, 10, 1) 35%,
+    rgba(196, 14, 14, 1) 100%
+  );
 }
 
 .container h1 {
-  display: none;
+  color: var(--fundo);
+  display: flex;
+  text-align: center;
+  margin-inline: 1rem;
 }
 
 .logo {
-  width: 4rem;
-  height: 2rem;
+  width: 9rem;
+  height: 4.5rem;
 }
 
-@media (min-width: 768px) {
-  .container {
-    align-items: center;
+@media (max-width: 768px) {
+  /*para celular abaixo*/
+  .container h1 {
+    display: none;
   }
 
   .logo {
-    width: 9rem;
-    height: 4rem;
-    margin-inline: 1rem;
+    width: 13rem;
+    height: 6rem;
   }
-
-  .container h1 {
-    color: var(--fundo);
-    display: flex;
-    text-align: center;
-    margin-inline: 1rem;
-  }
-
 }

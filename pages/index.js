@@ -34,12 +34,12 @@ export default function Home() {
             src="/images/sniper.jpg"
             width={1080}
             height={720}
-            className={styles.images}
+            className={styles.scope1}
           />
         </div>
         <div id="wave"></div>
         <div className={styles.invite}>
-          <h2>Cadastro:</h2>
+          <h2>Cadastre-se:</h2>
           <p>
             Olá! Gostaria de fazer parte de um clube de tiro de alto nível? O
             Império Shot Club oferece uma experiência única para quem busca
@@ -52,15 +52,15 @@ export default function Home() {
             perca mais tempo e junte-se a nós! Para se cadastrar e conhecer mais
             sobre o clube, visite nosso site e preencha o formulário de
             inscrição. Estamos ansiosos para recebê-lo!
-            <Link href="/Form" legacyBehavior>
-              <a>Clique aqui!</a>
-            </Link>
           </p>
+          <Link href="/Form" legacyBehavior>
+            <a>Faça parte!</a>
+          </Link>
           <Image
             src="/images/scope.jpg"
             width={1080}
             height={720}
-            className={styles.images}
+            className={styles.scope2}
           />
         </div>
         <div id="wave"></div>
@@ -70,13 +70,15 @@ export default function Home() {
             Não perca mais tempo procurando um lugar para praticar o tiro
             esportivo. Venha nos visitar e conheça nossa estrutura completa e
             profissionais especializados. Esperamos por você!
+          </p>{" "}
+          <p>
+            <Link href="https://goo.gl/maps/463ucFWjHh8kDt4Z6" legacyBehavior>
+              <a>
+                📍Ficamos localizados na Rua Rotariano Antônio Telino de
+                Lacerda, Bairro Portal do Sol, 273, CEP 58046-726
+              </a>
+            </Link>
           </p>
-          <Link href="https://goo.gl/maps/463ucFWjHh8kDt4Z6" legacyBehavior>
-            <a>
-              📍Ficamos localizados na Rua Rotariano Antônio Telino de Lacerda,
-              Bairro Portal do Sol, 273, CEP 58046-726
-            </a>
-          </Link>
         </div>
       </div>
     </>
