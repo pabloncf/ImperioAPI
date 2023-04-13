@@ -3,15 +3,15 @@
 :root {
   --fundo: white;
 
-  --primary100: #450505;
-  --primary75: #940a0a;
-  --primary50: #c40e0e;
+  --blacktext: #000;
+  --redtext: #b60303;
 
   background: linear-gradient(
     90deg,
-    rgba(69, 5, 5, 1) 0%,
-    rgba(148, 10, 10, 1) 35%,
-    rgba(196, 14, 14, 1) 100%
+    rgb(44, 44, 44) 0%,
+    rgb(61, 61, 61) 30%,
+    rgb(48, 48, 48) 50%,
+    rgb(0, 0, 0) 100%
   );
 
   font-family: "Mukta", sans-serif;

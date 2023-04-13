@@ -19,7 +19,6 @@
 }
 
 .about p {
-  color: rgba(148, 10, 10, 1);
   width: 60%;
 }
 
@@ -28,7 +27,7 @@
   width: 91.5%;
   margin-right: auto;
   background-color: white;
-  color: rgba(148, 10, 10, 1);
+  color: var(--redtext);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
 
@@ -41,6 +40,7 @@
 }
 
 .invite a {
+  display: block;
   font-size: 20px;
   font-style: italic;
   color: white;
@@ -51,7 +51,7 @@
   width: 91.5%;
   margin-right: auto;
   background-color: white;
-  color: rgba(148, 10, 10, 1);
+  color: var(--redtext);
 }
 
 .scope1 {
@@ -69,7 +69,7 @@
 }
 
 .location a {
-  color: var(--primary50);
+  color: red;
 }
 
 #wave {
@@ -114,10 +114,19 @@
     padding: 0;
   }
 
+  .invite a {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+  }
+
   .location {
     width: 100%;
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: -1rem;
   }
 
   .images {
@@ -129,9 +138,10 @@
 
   .scope1,
   .scope2 {
+    padding: 1rem;
     margin-left: 0;
     margin-top: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
     border-radius: 900px;
   }
