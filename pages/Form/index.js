@@ -135,9 +135,12 @@ export default function Form() {
               name="sexo"
               value={sexo}
               onChange={(e) => setSexo(e.target.value)}
+              pattern="Selecione"
               required
             >
-              <option>Selecione</option>
+              <option value="" disabled selected>
+                Selecione
+              </option>
               <option value="masculino">Masculino</option>
               <option value="feminino">Feminino</option>
             </select>
@@ -150,7 +153,9 @@ export default function Form() {
               onChange={(e) => setEstado_civil(e.target.value)}
               required
             >
-              <option>Selecione</option>
+              <option value="" disabled selected>
+                Selecione
+              </option>
               <option value="solteiro">Solteiro</option>
               <option value="casado">Casado</option>
               <option value="divorciado">Divorciado</option>
@@ -163,7 +168,9 @@ export default function Form() {
               onChange={(e) => setParatleta(e.target.value)}
               required
             >
-              <option>Selecione</option>
+              <option value="" disabled selected>
+                Selecione
+              </option>
               <option value="sim">Sim</option>
               <option value="nao">Não</option>
             </select>
@@ -320,6 +327,9 @@ export default function Form() {
               onChange={(e) => setOrgao_emissor(e.target.value)}
               required
             >
+              <option value="" disabled selected>
+                Selecione
+              </option>
               <option>Selecione um órgão emissor</option>
               <option value="AC">
                 AC - Instituto de Identificação do Acre
@@ -437,7 +447,6 @@ export default function Form() {
 
             <label for="validade_cr">Validade do CR:</label>
             <input
-              placeholder="opcional"
               type="date"
               value={validade_cr}
               onChange={(e) => setValidade_cr(e.target.value)}

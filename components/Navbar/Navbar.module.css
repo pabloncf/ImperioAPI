@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 768px) {
-  /*para celular abaixo*/
+  /*para dispositivos moveis*/
   .container h1 {
     display: none;
   }

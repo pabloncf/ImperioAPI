@@ -5,11 +5,7 @@
   justify-content: space-evenly;
 }
 
-.container ::placeholder {
-  padding-left: 5px;
-}
-
-.hidden h1 {
+.hidden {
   /*esconder um h1 feito pra alinhar*/
   visibility: hidden;
 }
@@ -23,22 +19,34 @@
   color: whitesmoke;
 }
 
-.form input {
-  border-radius: 10px;
-  border: 2px solid var(--primary50);
-  background-color: whitesmoke;
-  width: 16rem;
-  height: 1rem;
-  font-family: "Mukta", sans-serif;
-}
-
+.form input,
 .form select {
+  color: black;
+  padding-left: 7px;
   border-radius: 10px;
   border: 2px solid var(--primary50);
   background-color: whitesmoke;
   width: 16rem;
   height: 2rem;
   font-family: "Mukta", sans-serif;
+}
+
+.form select:required:invalid, /*aplicar no campo do select enquanto valor for nulo (required)*/
+.form input[type="date"]:required:invalid,/*aplicar no campo do input type=date enquanto valor for nulo (required)*/
+.form input:not(:required),/*aplicar nos campos dos input type=date enquanto valor for nulo (não required)*/
+/* .form select:not(:required),aplicar no input do select enquanto valor for nulo (não required) */
+.form input::placeholder,/*aplica nos placeholders do input*/
+.form textarea::placeholder {
+  /*aplica nos placeholders dos textareas*/
+  color: #0000004f;
+}
+
+.form option {
+  color: #000000; /* cor das opções */
+}
+
+.form option[value=""] {
+  color: #00000041; /* cor das opções que tem valores nulos (ou seja, os defaults)*/
 }
 
 .form button {
@@ -53,6 +61,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 10px;
 }
 
 .form button:hover {
