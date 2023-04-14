@@ -5,7 +5,11 @@
   justify-content: space-evenly;
 }
 
-.hidden {
+.container ::placeholder {
+  padding-left: 5px;
+}
+
+.hidden h1 {
   /*esconder um h1 feito pra alinhar*/
   visibility: hidden;
 }

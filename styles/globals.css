@@ -8,10 +8,9 @@
 
   background: linear-gradient(
     90deg,
-    rgb(44, 44, 44) 0%,
-    rgb(61, 61, 61) 30%,
-    rgb(48, 48, 48) 50%,
-    rgb(0, 0, 0) 100%
+    rgba(69, 5, 5, 1) 0%,
+    rgba(148, 10, 10, 1) 35%,
+    rgba(196, 14, 14, 1) 100%
   );
 
   font-family: "Mukta", sans-serif;

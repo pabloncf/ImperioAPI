@@ -3,12 +3,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: linear-gradient(
-    90deg,
-    rgba(69, 5, 5, 1) 0%,
-    rgba(148, 10, 10, 1) 35%,
-    rgba(196, 14, 14, 1) 100%
-  );
 }
 
 .container h1 {
