@@ -6,5 +6,5 @@ from .serializer import ClienteSerializer
 # Create your views here.
 
 class ClienteViewSet(viewsets.ModelViewSet):
-    queryset = Cliente.objects.all().order_by('id_cliente')
+    queryset = Cliente.objects.all().order_by('cpf')
     serializer_class = ClienteSerializer

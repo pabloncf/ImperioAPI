@@ -5,7 +5,7 @@ class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
         fields = [
-            'id_cliente',
+            'cpf',
             'nome',
             'nacionalidade',
             'naturalidade',
@@ -28,7 +28,6 @@ class ClienteSerializer(serializers.ModelSerializer):
             'dependente_02',
             'dependente_03',
             'dependente_04',
-            'cpf',
             'rg',
             'orgao_emissor',
             'data_emissao',

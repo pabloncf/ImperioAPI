@@ -4,7 +4,7 @@ from .models import Cliente
 
 class ClienteAdmin(admin.ModelAdmin):
     list_display = (
-        'id_cliente',
+        'cpf',
         'nome',
         'nacionalidade',
         'naturalidade',
@@ -27,7 +27,6 @@ class ClienteAdmin(admin.ModelAdmin):
         'dependente_02',
         'dependente_03',
         'dependente_04',
-        'cpf',
         'rg',
         'orgao_emissor',
         'data_emissao',
