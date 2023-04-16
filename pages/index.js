@@ -1,10 +1,14 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Imperio - Home</title>
+      </Head>
       <div className={styles.container}>
         <hr size="1" width="90%"></hr>
         <h1>Bem vindo ao nosso Império!</h1>

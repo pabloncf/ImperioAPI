@@ -94,9 +94,10 @@ export default function Form() {
   return (
     <>
       <form onSubmit={handleSubmit} className={styles.form}>
+        <hr />
+
         <div className={styles.container}>
           <div>
-            <h1>Dados Pessoais:</h1>
             <label for="nome">Nome:</label>
             <input
               placeholder="insira seu nome"
@@ -161,19 +162,16 @@ export default function Form() {
               <option value="divorciado">Divorciado</option>
             </select>
 
-            <label for="paratleta">Paratleta:</label>
-            <select
-              name="paratleta"
-              value={paratleta}
-              onChange={(e) => setParatleta(e.target.value)}
+            <label for="cep">CEP:</label>
+            <input
+              pattern="[0-9]{7,9}"
+              title="8 digitos, apenas numeros."
+              placeholder="insira seu CEP"
+              value={cep}
+              onChange={(e) => setCep(e.target.value)}
+              onBlur={getCep}
               required
-            >
-              <option value="" disabled selected>
-                Selecione
-              </option>
-              <option value="sim">Sim</option>
-              <option value="nao">Não</option>
-            </select>
+            />
 
             <label for="endereço">Endereço:</label>
             <input
@@ -188,15 +186,6 @@ export default function Form() {
               placeholder="insira seu bairro"
               value={bairro}
               onChange={(e) => setBairro(e.target.value)}
-              required
-            />
-
-            <label for="cep">CEP:</label>
-            <input
-              placeholder="insira seu CEP"
-              value={cep}
-              onChange={(e) => setCep(e.target.value)}
-              onBlur={getCep}
               required
             />
 
@@ -217,7 +206,6 @@ export default function Form() {
             />
           </div>
           <div>
-            <h1 className={styles.hidden}>.</h1>
             <label for="telefoneResidencial">Telefone Residencial:</label>
             <input
               placeholder="opcional"
@@ -250,7 +238,7 @@ export default function Form() {
 
             <label for="profissao">Profissão:</label>
             <input
-              placeholder="inria sua profissão"
+              placeholder="insira sua profissão"
               value={profissao}
               onChange={(e) => setProfissao(e.target.value)}
               required
@@ -302,10 +290,10 @@ export default function Form() {
           </div>
 
           <div>
-            <h1>Documentos:</h1>
             <label for="cpf">CPF:</label>
             <input
-              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              pattern="[0-9]{11}"
+              title="11 digitos, apenas numeros."
               placeholder="insira seu CPF"
               value={cpf}
               onChange={(e) => setCpf(e.target.value)}
@@ -314,7 +302,8 @@ export default function Form() {
 
             <label for="rg">RG:</label>
             <input
-              pattern="\d{2}\.\d{3}\.\d{3}-[0-9a-zA-Z]{1}"
+              pattern="[0-9]{7,9}"
+              title="7 a 9 digitos, apenas numeros."
               placeholder="insira seu RG"
               value={rg}
               onChange={(e) => setRg(e.target.value)}
@@ -424,6 +413,20 @@ export default function Form() {
               required
             />
 
+            <label for="paratleta">Paratleta:</label>
+            <select
+              name="paratleta"
+              value={paratleta}
+              onChange={(e) => setParatleta(e.target.value)}
+              required
+            >
+              <option value="" disabled selected>
+                Selecione
+              </option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+
             <label for="passaporte">Passaporte:</label>
             <input
               placeholder="opcional"
@@ -447,6 +450,7 @@ export default function Form() {
 
             <label for="validade_cr">Validade do CR:</label>
             <input
+              id=""
               type="date"
               value={validade_cr}
               onChange={(e) => setValidade_cr(e.target.value)}

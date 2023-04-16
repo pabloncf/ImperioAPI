@@ -1,3 +1,7 @@
+.form hr {
+  margin-inline: 26rem;
+}
+
 .container {
   display: flex;
   padding-inline: 20rem;
@@ -5,15 +9,6 @@
   justify-content: space-evenly;
 }
 
-.hidden {
-  /*esconder um h1 feito pra alinhar*/
-  visibility: hidden;
-}
-
-.form h1 {
-  margin: 0;
-  color: whitesmoke;
-}
 .form label {
   display: flex;
   color: whitesmoke;
@@ -23,17 +18,23 @@
 .form select {
   color: black;
   padding-left: 7px;
-  border-radius: 10px;
+
   border: 2px solid var(--primary50);
   background-color: whitesmoke;
   width: 16rem;
   height: 2rem;
   font-family: "Mukta", sans-serif;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0) inset;
+}
+
+/* apenas para igualar o tamanho com os inputs */
+.form select {
+  width: 16.6rem;
 }
 
 .form select:required:invalid, /*aplicar no campo do select enquanto valor for nulo (required)*/
 .form input[type="date"]:required:invalid,/*aplicar no campo do input type=date enquanto valor for nulo (required)*/
-.form input:not(:required),/*aplicar nos campos dos input type=date enquanto valor for nulo (não required)*/
+.form input[type="date"]:not(:required),/*aplicar nos campos dos input type=date enquanto valor for nulo (não required)*/
 /* .form select:not(:required),aplicar no input do select enquanto valor for nulo (não required) */
 .form input::placeholder,/*aplica nos placeholders do input*/
 .form textarea::placeholder {
@@ -50,45 +51,45 @@
 }
 
 .form button {
-  width: 16rem;
-  height: 2rem;
+  width: 16.5rem;
+  height: 3rem;
   margin: auto;
   margin-top: 1rem;
   display: block;
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.671);
   color: whitesmoke;
   font-family: "Mukta", sans-serif;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0) inset;
 }
 
 .form button:hover {
-  opacity: 75%;
+  background-color: rgb(0, 128, 0);
   font-size: 17px;
 }
 
 .form textarea {
-  border-radius: 10px;
   border: 2px solid var(--primary50);
   width: 16rem;
   height: 2rem;
   font-family: "Mukta", sans-serif;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0) inset;
 }
 
 @media (max-width: 768px) {
   /*para dispositivos moveis*/
+  .form hr {
+    margin-inline: 3rem;
+  }
+
   .container {
     display: block;
     padding-inline: 0;
     margin-top: 3rem;
     align-items: center;
     flex-direction: column;
-  }
-
-  .form h1 {
-    text-align: center;
   }
 
   .form label {
