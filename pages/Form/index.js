@@ -1,8 +1,10 @@
 import styles from "./Form.module.css";
 
 import { useState } from "react";
-import { createPost } from "./api";
+import { createPost } from "../../server/api";
 import axios from "axios";
+
+import Head from "next/head";
 
 export default function Form() {
   const [nome, setNome] = useState("");
@@ -93,12 +95,15 @@ export default function Form() {
 
   return (
     <>
+      <Head>
+        <title>Imperio - Cadastro</title>
+      </Head>
       <form onSubmit={handleSubmit} className={styles.form}>
         <hr />
 
         <div className={styles.container}>
           <div>
-            <label for="nome">Nome:</label>
+            <label htmlFor="nome">Nome:</label>
             <input
               placeholder="insira seu nome"
               value={nome}
@@ -106,7 +111,7 @@ export default function Form() {
               required
             />
 
-            <label for="nacionalidade">Nacionalidade:</label>
+            <label htmlFor="nacionalidade">Nacionalidade:</label>
             <input
               placeholder="insira sua nacionalidade"
               value={nacionalidade}
@@ -114,7 +119,7 @@ export default function Form() {
               required
             />
 
-            <label for="naturalidade">Naturalidade:</label>
+            <label htmlFor="naturalidade">Naturalidade:</label>
             <input
               placeholder="insira sua naturalidade"
               value={naturalidade}
@@ -122,7 +127,7 @@ export default function Form() {
               required
             />
 
-            <label for="nascimento">Nascimento:</label>
+            <label htmlFor="nascimento">Nascimento:</label>
             <input
               type="date"
               value={data_nasc}
@@ -130,7 +135,7 @@ export default function Form() {
               required
             />
 
-            <label for="sexo">Sexo:</label>
+            <label htmlFor="sexo">Sexo:</label>
             <select
               placeholder="insira seu sexo"
               name="sexo"
@@ -139,14 +144,14 @@ export default function Form() {
               pattern="Selecione"
               required
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Selecione
               </option>
               <option value="masculino">Masculino</option>
               <option value="feminino">Feminino</option>
             </select>
 
-            <label for="estadoCivil">Estado civil:</label>
+            <label htmlFor="estadoCivil">Estado civil:</label>
             <select
               placeholder="insira sueu estado civil"
               name="estadoCivil"
@@ -154,7 +159,7 @@ export default function Form() {
               onChange={(e) => setEstado_civil(e.target.value)}
               required
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Selecione
               </option>
               <option value="solteiro">Solteiro</option>
@@ -162,7 +167,7 @@ export default function Form() {
               <option value="divorciado">Divorciado</option>
             </select>
 
-            <label for="cep">CEP:</label>
+            <label htmlFor="cep">CEP:</label>
             <input
               pattern="[0-9]{7,9}"
               title="8 digitos, apenas numeros."
@@ -173,7 +178,7 @@ export default function Form() {
               required
             />
 
-            <label for="endereço">Endereço:</label>
+            <label htmlFor="endereço">Endereço:</label>
             <input
               placeholder="insira seu endereço"
               value={endereco}
@@ -181,7 +186,7 @@ export default function Form() {
               required
             />
 
-            <label for="bairro">Bairro:</label>
+            <label htmlFor="bairro">Bairro:</label>
             <input
               placeholder="insira seu bairro"
               value={bairro}
@@ -189,7 +194,7 @@ export default function Form() {
               required
             />
 
-            <label for="cidade">Cidade:</label>
+            <label htmlFor="cidade">Cidade:</label>
             <input
               placeholder="insira sua cidade"
               value={cidade}
@@ -197,7 +202,7 @@ export default function Form() {
               required
             />
 
-            <label for="estado">Estado:</label>
+            <label htmlFor="estado">Estado:</label>
             <input
               placeholder="insira seu estado"
               value={estado}
@@ -206,21 +211,21 @@ export default function Form() {
             />
           </div>
           <div>
-            <label for="telefoneResidencial">Telefone Residencial:</label>
+            <label htmlFor="telefoneResidencial">Telefone Residencial:</label>
             <input
               placeholder="opcional"
               value={telefone_residencial}
               onChange={(e) => setTelefone_residencial(e.target.value)}
             />
 
-            <label for="telefoneComercial">Telefone Comercial:</label>
+            <label htmlFor="telefoneComercial">Telefone Comercial:</label>
             <input
               placeholder="opcional"
               value={telefone_comercial}
               onChange={(e) => setTelefone_comercial(e.target.value)}
             />
 
-            <label for="celular">Celular:</label>
+            <label htmlFor="celular">Celular:</label>
             <input
               placeholder="insira seu numero"
               value={celular}
@@ -228,7 +233,7 @@ export default function Form() {
               required
             />
 
-            <label for="email">Email:</label>
+            <label htmlFor="email">Email:</label>
             <input
               placeholder="insira seu email"
               value={email}
@@ -236,7 +241,7 @@ export default function Form() {
               required
             />
 
-            <label for="profissao">Profissão:</label>
+            <label htmlFor="profissao">Profissão:</label>
             <input
               placeholder="insira sua profissão"
               value={profissao}
@@ -244,7 +249,7 @@ export default function Form() {
               required
             />
 
-            <label for="nomePai">Nome do Pai:</label>
+            <label htmlFor="nomePai">Nome do Pai:</label>
             <input
               placeholder="insira o nome do pai"
               value={nome_pai}
@@ -252,7 +257,7 @@ export default function Form() {
               required
             />
 
-            <label for="nomeMae">Nome da Mãe:</label>
+            <label htmlFor="nomeMae">Nome da Mãe:</label>
             <input
               placeholder="insira o nome da mãe"
               value={nome_mae}
@@ -260,28 +265,28 @@ export default function Form() {
               required
             />
 
-            <label for="dependente_01">Dependente 01:</label>
+            <label htmlFor="dependente_01">Dependente 01:</label>
             <input
               placeholder="opcional"
               value={dependente_01}
               onChange={(e) => setDependente_01(e.target.value)}
             />
 
-            <label for="dependente_02">Dependente 02:</label>
+            <label htmlFor="dependente_02">Dependente 02:</label>
             <input
               placeholder="opcional"
               value={dependente_02}
               onChange={(e) => setDependente_02(e.target.value)}
             />
 
-            <label for="dependente_03">Dependente 03:</label>
+            <label htmlFor="dependente_03">Dependente 03:</label>
             <input
               placeholder="opcional"
               value={dependente_03}
               onChange={(e) => setDependente_03(e.target.value)}
             />
 
-            <label for="dependente_04">Dependente 04:</label>
+            <label htmlFor="dependente_04">Dependente 04:</label>
             <input
               placeholder="opcional"
               value={dependente_04}
@@ -290,7 +295,7 @@ export default function Form() {
           </div>
 
           <div>
-            <label for="cpf">CPF:</label>
+            <label htmlFor="cpf">CPF:</label>
             <input
               pattern="[0-9]{11}"
               title="11 digitos, apenas numeros."
@@ -300,7 +305,7 @@ export default function Form() {
               required
             />
 
-            <label for="rg">RG:</label>
+            <label htmlFor="rg">RG:</label>
             <input
               pattern="[0-9]{7,9}"
               title="7 a 9 digitos, apenas numeros."
@@ -310,13 +315,13 @@ export default function Form() {
               required
             />
 
-            <label for="orgao_emissor">Orgão Emissor:</label>
+            <label htmlFor="orgao_emissor">Orgão Emissor:</label>
             <select
               value={orgao_emissor}
               onChange={(e) => setOrgao_emissor(e.target.value)}
               required
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Selecione
               </option>
               <option>Selecione um órgão emissor</option>
@@ -405,7 +410,7 @@ export default function Form() {
                 TO - Instituto de Identificação do Tocantins
               </option>{" "}
             </select>
-            <label for="data_emissao">Data de Emissão:</label>
+            <label htmlFor="data_emissao">Data de Emissão:</label>
             <input
               type="date"
               value={data_emissao}
@@ -413,42 +418,42 @@ export default function Form() {
               required
             />
 
-            <label for="paratleta">Paratleta:</label>
+            <label htmlFor="paratleta">Paratleta:</label>
             <select
               name="paratleta"
               value={paratleta}
               onChange={(e) => setParatleta(e.target.value)}
               required
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Selecione
               </option>
               <option value="sim">Sim</option>
               <option value="nao">Não</option>
             </select>
 
-            <label for="passaporte">Passaporte:</label>
+            <label htmlFor="passaporte">Passaporte:</label>
             <input
               placeholder="opcional"
               value={passaporte}
               onChange={(e) => setPassaporte(e.target.value)}
             />
 
-            <label for="validade_passaporte">Validade do Passaporte:</label>
+            <label htmlFor="validade_passaporte">Validade do Passaporte:</label>
             <input
               type="date"
               value={validade_passaporte}
               onChange={(e) => setValidade_passaporte(e.target.value)}
             />
 
-            <label for="cr">CR:</label>
+            <label htmlFor="cr">CR:</label>
             <input
               value={cr}
               onChange={(e) => setCr(e.target.value)}
               placeholder="opcional"
             />
 
-            <label for="validade_cr">Validade do CR:</label>
+            <label htmlFor="validade_cr">Validade do CR:</label>
             <input
               id=""
               type="date"
@@ -456,7 +461,7 @@ export default function Form() {
               onChange={(e) => setValidade_cr(e.target.value)}
             />
 
-            <label for="observacoes">Observações:</label>
+            <label htmlFor="observacoes">Observações:</label>
             <textarea
               placeholder="opcional"
               value={observacoes}
